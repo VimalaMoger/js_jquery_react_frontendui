@@ -42,7 +42,10 @@ const Layout = ( {categories} ) => {
                 }</ul>
               </nav>
               <article>
-                <Outlet />
+                {categories.data.length === 0 ?
+                   (<div>
+                      <span>Processing...</span></div>) : (<Outlet />)
+                }
               </article>               
             </section>
               
